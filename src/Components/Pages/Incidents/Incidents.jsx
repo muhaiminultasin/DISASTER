@@ -1,11 +1,9 @@
 import React from 'react'
 import SectionTitle from '../../Common/SectionTitle/SectionTitle'
 import Card from '../../Common/Card/Card'
-import Chat from './Chat';
-import { useState } from 'react';
 
 
-function Dashboard() {
+function Incidents() {
 
   const CardItems = [
     {
@@ -52,17 +50,12 @@ function Dashboard() {
     },
   ];
 
-  const [isHidden, setIsHidden] = useState(false);
-  const toggleVisibility = () => {
-    setIsHidden(!isHidden)
-  }
-  
-  console.log(isHidden)
+
 
   return (
     <>
       <div className='relative'>
-        <SectionTitle subTitle="Welcome back" title="Dashboard"/>
+        <SectionTitle subTitle="Welcome back" title="Incidents" button={"+ New Icidents"}/>
         <div key={CardItems.id} className='sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  mt-[50px] '>
           {
             CardItems.map(({img, title, address, price},i) => {
@@ -71,13 +64,10 @@ function Dashboard() {
           }
         </div>
         
-        <div className=' w-[77px] h-[77px] '>
-        <Chat className={!isHidden ? "hidden":"visible"} />
-          <img onClick={toggleVisibility}  src="./public/PBImage/C_icon.png" alt="" className='absolute right-[40px] bottom-[60px] rounded-full hover:shadow-lg transition delay-75 duration-75'/>
-        </div>
+        
       </div>
     </>
   )
 }
 
-export default Dashboard;
+export default Incidents;

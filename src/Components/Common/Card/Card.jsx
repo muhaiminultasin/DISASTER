@@ -3,7 +3,7 @@ import React from 'react'
 function Card({img, title, addr, price},i) {
   return (
     <div className=''>
-      <div key={i} className='w-[306px] p-2 mt-6 hover:shadow-lg transition delay-100 rounded cursor-pointer'>
+      <div key={i} className='w-[306px] mx-auto p-2 mt-6 hover:shadow-lg transition delay-100 rounded cursor-pointer'>
         <img src={img} alt="" />
         <div>
             <h1 className='font-[700] text-base leading-[30px] mt-2'>{title}</h1>
