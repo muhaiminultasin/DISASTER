@@ -55,7 +55,7 @@ function Incidents() {
   return (
     <>
       <div className='relative'>
-        <SectionTitle subTitle="Welcome back" title="Incidents" button={"+ New Icidents"}/>
+        <SectionTitle subTitle="Welcome back" title="Incidents" button1={"sorted by: Date modified"} button2={"+ New Icidents"}/>
         <div key={CardItems.id} className='sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  mt-[50px] '>
           {
             CardItems.map(({img, title, address, price},i) => {
