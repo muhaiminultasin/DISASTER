@@ -42,23 +42,53 @@ function Location() {
         <div className='px-5 md:px-[80px] grid md:grid-cols-2 gap-5'>
             {/* first div */}
             <div>
-                <div className='border-b-2 pb-10'>
+                <div className='border-b-2 pb-5'>
                     <InnerTitle img={"./public/PBImage/Location2.png"} title={"Tulare County,  Los Angles, CA 23415"} subtitle={"Location:"}/>
                     <InnerTitle img={"./public/PBImage/Cost.png"} title={"$60,607,456.00"} subtitle={"Approx. Cost:"} className={"border-b-2 pb-10"}/>
                 </div>
 
-                <div className='py-10 border-b-2'>
+                <div className='py-5 border-b-2'>
                     <h1 className='font-[700] text-[14px] leading-[22px]'>Description</h1>
                     <p className='font-[400] text-[16px] leading-[22px] text-primaryText'>Lorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit general sac mascho werho</p>
                 </div>
 
-                <div className='py-10'>
+                <div className='py-5'>
                     <h1 className='font-[700] text-[14px] leading-[22px]'>Location</h1>
 
                     <div className='grid md:grid-cols-3'>
                         {
                             IncidentLocation.map( ({img,title,address,price},i) => {
                                 return <Card className={"w-fit"} img={img} classNameTitle={"text-[14px] leading-[21px]"} subClassName={"text-[12px]"} priceClass={"text-[14px]"} key={i} title={title} addr={address} price={price}/>
+                            }) 
+                        }
+                    </div>
+                </div>
+
+                <div className="py-5 border-b-2">
+                    <div className='flex justify-between'>
+                        <h1 className='font-[700] text-[14px] leading-[22px]'>Activities</h1>
+                        <p className='font-[400] text-[14px] leading-[22px] border-b border-black cursor-pointer'>See all</p>
+                    </div>
+
+                    <div>
+                        {
+                            IncidentLocation.map( ({img,title,address,price},i) => {
+                                return <Card imgClass={"w-[100px]"} className={"w-full flex mx-0 gap-5 rounded-md bg-[#F4F4F5]"} img={img} classNameTitle={"text-[14px] leading-[21px]"} subClassName={"text-[12px]"} priceClass={"text-[14px]"} key={i} title={title} addr={address} price={price}/>
+                            }) 
+                        }
+                    </div>
+                </div>
+
+                <div className="py-5">
+                    <div className='flex justify-between'>
+                        <h1 className='font-[700] text-[14px] leading-[22px]'>Documents</h1>
+                        <p className='font-[400] text-[14px] leading-[22px] border-b border-black cursor-pointer'>See all</p>
+                    </div>
+
+                    <div>
+                        {
+                            IncidentLocation.map( ({img,title,address,price},i) => {
+                                return <Card imgClass={"w-[100px]"} className={"w-full flex mx-0 gap-5 rounded-md bg-[#F4F4F5]"} img={img} classNameTitle={"text-[14px] leading-[21px]"} subClassName={"text-[12px]"} priceClass={"text-[14px]"} key={i} title={title} addr={address} price={price}/>
                             }) 
                         }
                     </div>
