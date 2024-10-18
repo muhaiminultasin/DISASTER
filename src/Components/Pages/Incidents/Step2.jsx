@@ -1,8 +1,20 @@
 import React from 'react'
 import SectionTitle from '../../Common/SectionTitle/SectionTitle'
 import Cross from '../../Common/Button/Cross'
+import { useNavigate } from 'react-router-dom';
 
 function Step2() {
+
+  const navigate = useNavigate();
+
+    
+    const Next = () => {
+        navigate("/add-incident-title")
+    }
+
+    const Prev = () => {
+      navigate("/new-incident")
+  }
 
   const describeItem = [
     {
@@ -82,7 +94,7 @@ function Step2() {
   return (
     <div className='relative'>
         <Cross position="absolute top-5 left-4"/>
-      <SectionTitle className="flex flex-col " btnClass="w-[139px]" hidden="md:hidden" subTitle={"Home - Incidents - New Incident"} title={"New Incident"} button1={"Back"} button2={"Next"}/>
+      <SectionTitle className="flex flex-col " btnClass="w-[139px]" hidden="md:hidden" subTitle={"Home - Incidents - New Incident"} title={"New Incident"} button1={"Back"} link1={Prev} link2={Next} button2={"Next"}/>
         <h1 className='font-[700] text-[24px] my-5 leading-[30px] w-[62%] mx-auto'>Which of these best describes the incident?</h1>
       <div className='grid grid-cols-4 gap-5 justify-center w-fit mx-auto'>
         {describeItem.map( ({img,text},i)=>{

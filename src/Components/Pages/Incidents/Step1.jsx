@@ -1,9 +1,17 @@
 import React from 'react';
 import IncidentsTitle from './IncidentsStepTitle/incidentsTitle';
 import Button from '../../Common/Button/Button';
+import { useNavigate } from 'react-router-dom';
 
 function Step1() {
 
+    const navigate = useNavigate();
+
+    
+    const getStart = () => {
+        navigate("/describe-sec")
+    }
+    
     const cardItem = [
         {
             img:"./public/PBImage/Fan.png",
@@ -21,7 +29,7 @@ function Step1() {
             desc:"Lorem ipsum dolar sit general sac mascho werho",
         }
     ]
-
+    
   return (
     <div>
       <IncidentsTitle className="text-center w-[90%] md:w-[50%] mx-auto" title={"Let’s get started"} subTitle={'Lorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit gene'}/>
@@ -63,7 +71,7 @@ function Step1() {
             })}
         </div>
       </div>
-      <Button children={"Get started"} className="mx-auto"/>
+      <Button link={getStart} children={"Get started"} className="mx-auto"/>
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import SectionTitle from '../../Common/SectionTitle/SectionTitle'
 import Card from '../../Common/Card/Card'
+import { useNavigate } from 'react-router-dom';
 
 
 function Incidents() {
@@ -50,12 +51,18 @@ function Incidents() {
     },
   ];
 
+  const navigate = useNavigate();
+
+  const handleNewIncidentbtn = () => {
+    navigate("/new-incident")
+  }
+
 
 
   return (
     <>
       <div className='relative'>
-        <SectionTitle subTitle="Welcome back" title="Incidents" button1={"sorted by: Date modified"} button2={"+ New Icidents"}/>
+        <SectionTitle subTitle="Welcome back" title="Incidents" button1={"sorted by: Date modified"} link2={handleNewIncidentbtn} button2={"+ New Icidents"}/>
         <div key={CardItems.id} className='sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  mt-[50px] '>
           {
             CardItems.map(({img, title, address, price},i) => {

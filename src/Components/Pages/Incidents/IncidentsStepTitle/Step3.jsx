@@ -2,12 +2,25 @@ import React from 'react'
 import Cross from '../../../Common/Button/Cross';
 import SectionTitle from '../../../Common/SectionTitle/SectionTitle';
 import PageTitle from '../../../Common/PageTitle/pageTitle';
+import { useNavigate } from 'react-router-dom';
 
 function Step3() {
+
+  const navigate = useNavigate();
+
+    
+    const Next = () => {
+        navigate("/save-incident")
+    }
+
+    const Prev = () => {
+        navigate("/describe-sec")
+    }
+
   return (
     <div className='relative'>
       <Cross position="absolute top-5 left-4"/>
-      <SectionTitle className="flex flex-col " btnClass="w-[139px]" hidden="md:hidden" subTitle={"Home - Incidents - New Incident"} title={"New Incident"} button1={"Back"} button2={"Next step"}/>
+      <SectionTitle className="flex flex-col " btnClass="w-[139px]" hidden="md:hidden" subTitle={"Home - Incidents - New Incident"} title={"New Incident"} link1={Prev} link2={Next} button1={"Back"} button2={"Next step"}/>
 
       <div className='w-[90%] md:w-[752px]  h-[366px] mx-auto my-10 '>
         <div>

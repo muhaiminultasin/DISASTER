@@ -2,12 +2,22 @@ import React from 'react'
 import SectionTitle from '../../Common/SectionTitle/SectionTitle';
 import PageTitle from '../../Common/PageTitle/pageTitle';
 import Cross from '../../Common/Button/Cross';
+import { useNavigate } from 'react-router-dom';
 
 function LastStep() {
+
+  const navigate = useNavigate();
+  const finished = () => {
+    navigate("/")
+  }
+  const Prev = () => {
+    navigate("/add-incident-title")
+  }
+
   return (
     <div className='relative'>
       <Cross position="absolute top-5 left-4"/>
-      <SectionTitle className="flex flex-col " btnClass="w-[139px]" hidden="md:hidden" subTitle={"Home - Incidents - New Incident"} title={"New Incident"} button1={"Back"} button2={"Finished"}/>
+      <SectionTitle className="flex flex-col " btnClass="w-[139px]" hidden="md:hidden" subTitle={"Home - Incidents - New Incident"} title={"New Incident"} link1={Prev} link2={finished} button1={"Back"} button2={"Finished"}/>
 
       <div className='w-[90%] md:w-[752px]  h-[366px] mx-auto my-10 '>
             <PageTitle title={"Let’s give the incident a title?"} subtitle={"Enter a GPS, address. or pin point on the map. Try to be as accurate as possible, or click:Jurisdiction Wide"} maxWidth={"mx-w-[518px]"}/>

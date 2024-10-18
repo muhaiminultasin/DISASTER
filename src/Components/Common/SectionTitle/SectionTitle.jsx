@@ -1,6 +1,6 @@
 import React from 'react'
 import { cn } from '../../../lib/utils/utility';
-function SectionTitle ({subTitle,title, button1,button2,className,btnClass,btn1Width, hidden, flexCol}) {
+function SectionTitle ({subTitle,title, button1,button2,className,btnClass,btn1Width, hidden, flexCol, link1, link2}) {
   return (
     
     <div className='bg-[#E4E4E780]'>
@@ -12,8 +12,8 @@ function SectionTitle ({subTitle,title, button1,button2,className,btnClass,btn1W
 
         <div className='flex gap-5'>
           <input className={cn(`h-[42px] px-2.5 py-3 rounded-md border-2 outline-none placeholder:text-[12px] placeholder:text-primaryText placeholder:font-[400] hidden md:block`,hidden)}  type="text" placeholder='Search incident'/>
-          <button className={cn(`bg-[#FFFFFF] h-[42px] px-2.5 py-3 rounded-md border-2 outline-none text-[12px] text-primaryText font-[400] hidden md:block`, btnClass,btn1Width)} >{button1}</button>  
-          <button className={cn(`bg-orange h-[42px] px-2.5 py-3.5 font-[700] text-[12px] leading-[15.3px] text-white rounded-md`,btnClass)}>{button2}</button>
+          <button onClick={link1} className={cn(`bg-[#FFFFFF] h-[42px] px-2.5 py-3 rounded-md border-2 outline-none text-[12px] text-primaryText font-[400] hidden md:block`, btnClass,btn1Width)} >{button1}</button>  
+          <button onClick={link2} className={cn(`bg-orange h-[42px] px-2.5 py-3.5 font-[700] text-[12px] leading-[15.3px] text-white rounded-md`,btnClass)}>{button2}</button>
         </div>
       </div>
       

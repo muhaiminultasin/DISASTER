@@ -1,19 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
 
     const NavItems = [
         {
             label: "Dash board",
-            link:"#"
+            link: "/"
         },
         {
             label: "Incidents",
-            link:"#"
+            link:"/Incidents"
         },
         {
             label: "Locations",
-            link:"#"
+            link:"/Location"
         },
         {
             label: "Activities",
@@ -39,7 +40,7 @@ function Navbar() {
             <ul className='hidden md:flex space-x-5 '>
                 {NavItems.map(({label, link} ,i) => {
                     return <li key={i} className='font-[400] text-[14px] leading-[17.85px] text-primaryText hover:text-primary'>
-                            <a href={link} className=''>{label}</a>
+                            <Link to={link}>{label}</Link>
                     </li>
                 })}
             </ul>

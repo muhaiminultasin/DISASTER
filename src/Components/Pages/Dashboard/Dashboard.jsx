@@ -61,7 +61,7 @@ function Dashboard() {
   return (
     <>
       <div className='relative'>
-        <SectionTitle subTitle="Welcome back" title="Dashboard" button1={"Back"} button2={"Next"} btnClass={"w-[139px]" }/>
+        <SectionTitle btn1Width={"w-[149px]"} subTitle="Welcome back" title="Dashboard" button1={"Sort by: date modified"} button2={"Cypher AI"} btnClass={"w-[139px]" }/>
         <div key={CardItems.id} className='sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  mt-[50px] '>
           {
             CardItems.map(({img, title, address, price},i) => {
