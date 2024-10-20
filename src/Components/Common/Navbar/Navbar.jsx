@@ -40,7 +40,7 @@ function Navbar() {
         <div className="logo">
             <img src="PBImage/Logo.png" alt="" />
         </div>
-        <div className="navLinks pt-1.5">
+        <div className="navLinks pt-1.5 mx-auto">
             <ul className='hidden md:flex space-x-5 '>
                 {NavItems.map(({label, link} ,i) => {
                     return <li key={i} className='font-[400] text-[14px] leading-[17.85px] text-primaryText hover:text-primary'>
@@ -49,10 +49,10 @@ function Navbar() {
                 })}
             </ul>
         </div>
-        <div className='flex items-center gap-5'>
+        <div className='flex items-center gap-5 ms-auto'>
             <img src="PBImage/notification.png" alt="" />
             <div className='user flex gap-3 items-center'>
-                    <img src="./public/PBImage/avatar.png" alt="" className='w-[40px] h-[40px]'/>
+                    <img src="/PBImage/avatar.png" alt="" className='w-[40px] h-[40px]'/>
                 <div className='hidden lg:block'>
                     <h3 className='font-[600] text-base leading-[20px] text-primaryText'>Usman Zafar</h3>
                     <p className='font-[400] text-[14px] leading-[17px] text-primaryText'>usmanzafar@gmail.com</p>
