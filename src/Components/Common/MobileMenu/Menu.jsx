@@ -17,7 +17,7 @@ function Menu({toggleMenu}) {
         <img src="/PBImage/Logo.png" alt="Logo" />
 
         <div className='user flex gap-3 items-center ms-auto'>
-                    <img src="./public/PBImage/avatar.png" alt="" className='w-[40px] h-[40px]'/>
+                    <img src="/PBImage/avatar.png" alt="" className='w-[40px] h-[40px]'/>
                 <div className='hidden lg:block'>
                     <h3 className='font-[600] text-base leading-[20px] text-primaryText'>Usman Zafar</h3>
                     <p className='font-[400] text-[14px] leading-[17px] text-primaryText'>usmanzafar@gmail.com</p>

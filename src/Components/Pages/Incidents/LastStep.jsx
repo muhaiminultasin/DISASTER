@@ -23,17 +23,17 @@ function LastStep() {
             <PageTitle title={"Let’s give the incident a title?"} subtitle={"Enter a GPS, address. or pin point on the map. Try to be as accurate as possible, or click:Jurisdiction Wide"} maxWidth={"mx-w-[518px]"}/>
 
             <div className='py-5 relative'>
-                <img src="./public/PBImage/Map.png" alt="" className='rounded-lg'/>
+                <img src="/PBImage/Map.png" alt="" className='rounded-lg'/>
 
                 <div className='absolute top-10 left-5'>
                   <div className='flex relative'>
                     <input type="text" placeholder='Enter incident address or GPS' className='py-3 pe-5 ps-10 outline-none rounded-lg placeholder:font-400 placeholder:text-[12px] leading-[15px]'/>
-                    <img src="./public/PBImage/search.png" alt="" className='absolute top-4 left-3'/>
+                    <img src="/PBImage/search.png" alt="" className='absolute top-4 left-3'/>
                   </div>
 
                   <div className='flex relative mt-4'>
                     <input type="text" placeholder='Pinpoint damage' className='py-3 pe-5 ps-10 outline-none rounded-lg placeholder:font-400 placeholder:text-[12px] leading-[15px]'/>
-                    <img src="./public/PBImage/search.png" alt="" className='absolute top-4 left-3'/>
+                    <img src="/PBImage/search.png" alt="" className='absolute top-4 left-3'/>
                   </div>
                 </div>
             </div>

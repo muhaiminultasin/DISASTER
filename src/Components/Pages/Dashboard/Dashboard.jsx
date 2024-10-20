@@ -10,42 +10,42 @@ function Dashboard() {
   const CardItems = [
     {
       id:1,
-      img:"./public/PBImage/card1.png",
+      img:"./PBImage/card1.png",
       title:"Whitechapel Rd.",
       address:"Tulare County,  Los Angles, CA 23415",
       price: "$1,456,654.00",
     },
     {
       id:2,
-      img:"./public/PBImage/card2.png",
+      img:"/PBImage/card2.png",
       title:"Whitechapel Rd.",
       address:"Tulare County,  Los Angles, CA 23415",
       price: "$1,456,654.00",
     },
     {
       id:3,
-      img:"./public/PBImage/card3.png",
+      img:"PBImage/card3.png",
       title:"Whitechapel Rd.",
       address:"Tulare County,  Los Angles, CA 23415",
       price: "$1,456,654.00",
     },
     {
       id:4,
-      img:"./public/PBImage/card4.png",
+      img:"PBImage/card4.png",
       title:"Whitechapel Rd.",
       address:"Tulare County,  Los Angles, CA 23415",
       price: "$1,456,654.00",
     },
     {
       id:5,
-      img:"./public/PBImage/card5.png",
+      img:"/PBImage/card5.png",
       title:"Whitechapel Rd.",
       address:"Tulare County,  Los Angles, CA 23415",
       price: "$1,456,654.00",
     },
     {
       id:6,
-      img:"./public/PBImage/card6.png",
+      img:"/PBImage/card6.png",
       title:"Whitechapel Rd.",
       address:"Tulare County,  Los Angles, CA 23415",
       price: "$1,456,654.00",
@@ -72,7 +72,7 @@ function Dashboard() {
         
         <div className=' w-[77px] h-[77px] '>
         <Chat className={!isHidden ? "hidden":"visible"} />
-          <img onClick={toggleVisibility}  src="./public/PBImage/C_icon.png" alt="" className='absolute right-[40px] bottom-[60px] rounded-full hover:shadow-lg transition delay-75 duration-75'/>
+          <img onClick={toggleVisibility}  src="PBImage/C_icon.png" alt="" className='absolute right-[40px] bottom-[60px] rounded-full hover:shadow-lg transition delay-75 duration-75'/>
         </div>
       </div>
     </>

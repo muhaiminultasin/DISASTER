@@ -38,7 +38,7 @@ function Navbar() {
     <nav className='bg-[#E4E4E780] border-b-2 '>
       <div className='h-[59px] px-[20px] md:px-[80px] py-2 flex justify-between'>
         <div className="logo">
-            <img src="./public/PBImage/Logo.png" alt="" />
+            <img src="PBImage/Logo.png" alt="" />
         </div>
         <div className="navLinks pt-1.5">
             <ul className='hidden md:flex space-x-5 '>
@@ -50,7 +50,7 @@ function Navbar() {
             </ul>
         </div>
         <div className='flex items-center gap-5'>
-            <img src="./public/PBImage/notification.png" alt="" />
+            <img src="PBImage/notification.png" alt="" />
             <div className='user flex gap-3 items-center'>
                     <img src="./public/PBImage/avatar.png" alt="" className='w-[40px] h-[40px]'/>
                 <div className='hidden lg:block'>

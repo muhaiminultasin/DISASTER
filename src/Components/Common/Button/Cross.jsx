@@ -12,7 +12,7 @@ function Cross({position}) {
 
   return (
     <div onClick={close} className= {cn(`w-fit p-2 md:bg-[#FAFAFA] rounded-full md:border md:shadow-md hover:shadow-lg`, position)}>
-      <img src="./public/PBImage/Cross.png" alt="" />
+      <img src="PBImage/Cross.png" alt="" />
     </div>
   )
 }
