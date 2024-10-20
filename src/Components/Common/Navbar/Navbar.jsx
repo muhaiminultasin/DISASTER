@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Menu from '../MobileMenu/Menu';
 
 function Navbar() {
@@ -19,15 +19,15 @@ function Navbar() {
         },
         {
             label: "Activities",
-            link:"#"
+            link:"/activities"
         },
         {
             label: "Documents",
-            link:"#"
+            link:"/documents"
         },
         {
             label: "Cypher AI",
-            link:"#"
+            link:"/ai"
         },
     ]
 
@@ -44,7 +44,7 @@ function Navbar() {
             <ul className='hidden md:flex space-x-5 '>
                 {NavItems.map(({label, link} ,i) => {
                     return <li key={i} className='font-[400] text-[14px] leading-[17.85px] text-primaryText hover:text-primary'>
-                            <Link to={link}>{label}</Link>
+                            <NavLink to={link}>{label}</NavLink>
                     </li>
                 })}
             </ul>

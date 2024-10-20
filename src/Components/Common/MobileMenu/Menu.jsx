@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Menu({toggleMenu}) {
   const NavItems = [
@@ -33,7 +33,7 @@ function Menu({toggleMenu}) {
         <ul className='space-y-5 '>
           {NavItems.map(({ label, link }, i) => (
             <li key={i} className='font-[400] text-[14px] leading-[17.85px] text-primaryText hover:text-primary'>
-              <Link to={link} >{label}</Link>
+              <NavLink to={link} >{label}</NavLink>
             </li>
           ))}
         </ul>

@@ -7,3 +7,9 @@
 #root{
     font-family: "Onest", sans-serif;
 }
+
+.active{
+    color:black;
+    font-weight:bold;
+    border-bottom:2px solid black;
+}
