@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Menu from '../MobileMenu/Menu';
 
 function Navbar() {
 
@@ -30,6 +31,9 @@ function Navbar() {
         },
     ]
 
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const  toggleMenu = () => setIsMenuOpen(!isMenuOpen)
+
   return (
     <nav className='bg-[#E4E4E780] border-b-2 '>
       <div className='h-[59px] px-[20px] md:px-[80px] py-2 flex justify-between'>
@@ -55,6 +59,19 @@ function Navbar() {
                 </div>
             </div>
         </div>
+
+        <div className="flex justify-center items-center gap-2.5">
+            <button onClick={toggleMenu} aria-label='Toggle Menu' className='md:hidden block'>
+                <div className='space-y-1'>
+                    <span className='block w-6 h-0.5 bg-black'></span>
+                    <span className='block w-6 h-0.5 bg-black'></span>
+                    <span className='block w-6 h-0.5 bg-black'></span>
+                </div>
+            </button>
+        </div>
+
+        {isMenuOpen && <Menu toggleMenu={toggleMenu}/>}
+
       </div>
     </nav>
   )
