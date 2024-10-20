@@ -1,5 +1,5 @@
 import React from 'react';
-import IncidentsTitle from './IncidentsStepTitle/incidentsTitle';
+import IncidentsTitle from '../Incidents/IncidentsStepTitle/IncidentsTitle';
 import Button from '../../Common/Button/Button';
 import { useNavigate } from 'react-router-dom';
 

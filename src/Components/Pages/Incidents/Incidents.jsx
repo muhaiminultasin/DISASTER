@@ -1,7 +1,7 @@
 import React from 'react'
-import SectionTitle from '../../Common/SectionTitle/SectionTitle'
 import Card from '../../Common/Card/Card'
 import { useNavigate } from 'react-router-dom';
+import SectionTitle from '../../Common/SectionTitle/SectionTitle';
 
 
 function Incidents() {
